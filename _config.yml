@@ -83,10 +83,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Eric Ranstrom"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  bio              : "Software Engineer at Workday."
+  location         : "Bay Area, CA, USA"
   email            :
   uri              :
   bitbucket        :
