@@ -2,7 +2,7 @@
     <script src="{{ site.baseurl }}/assets/unity/{{page.unity}}/Build/UnityLoader.js"></script>
     <script>
       function runUnityLoader() {
-          var gameInstance = UnityLoader.instantiate("gameContainer", "{{ site.baseurl }}/assets/unity/{{page.unity}}/Build/builds.json", {onProgress: UnityProgress, onComplete: function(){gameInstance.SetFullscreen(1)} });
+          var gameInstance = UnityLoader.instantiate("gameContainer", "{{ site.baseurl }}/assets/unity/{{page.unity}}/Build/builds.json", {onProgress: UnityProgress});
       }
     </script>
     <div class="webgl-content">
