@@ -4,7 +4,6 @@
       function runUnityLoader() {
           var gameInstance = UnityLoader.instantiate("gameContainer", "{{ site.baseurl }}/assets/unity/{{page.unity}}/Build/builds.json", {onProgress: UnityProgress, onComplete: function(){gameInstance.SetFullscreen(1)} });
       }
-      }
     </script>
     <div class="webgl-content">
       <button type="button" class="template-wrap" style="z-index:10" onclick="runUnityLoader(); style.display='none';">Play</button>
