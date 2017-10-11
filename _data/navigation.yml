@@ -6,18 +6,3 @@ main:
   #   url: /year-archive/
   - title: "Categories"
     url: /categories/
-
-# sidebar navigation list sample
-sidebar-sample:
-  - title: "The Top"
-    children:
-      - title: "Tags"
-        url: /tags/
-      - title: "Child Page A2"
-        url: /
-      - title: "Child Page A3"
-        url: /
-      - title: "Child Page A4"
-        url: /
-  - title: "The Bottom"
-    url: /tags/
