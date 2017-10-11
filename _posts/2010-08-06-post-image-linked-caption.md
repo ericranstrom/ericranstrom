@@ -1,6 +1,7 @@
 ---
 author_profile: false
 title: "Post: Image (Linked with Caption)"
+comments: true
 categories:
   - Post Formats
 tags:
