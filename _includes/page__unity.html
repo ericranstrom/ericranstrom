@@ -1,9 +1,12 @@
     <script src="{{ site.baseurl }}/assets/unity/{{page.unity}}/TemplateData/UnityProgress.js"></script>  
     <script src="{{ site.baseurl }}/assets/unity/{{page.unity}}/Build/UnityLoader.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "{{ site.baseurl }}/assets/unity/{{page.unity}}/Build/builds.json", {onProgress: UnityProgress});
+      function runUnityLoader() {
+          var gameInstance = UnityLoader.instantiate("gameContainer", "{{ site.baseurl }}/assets/unity/{{page.unity}}/Build/builds.json", {onProgress: UnityProgress});
+      }
     </script>
     <div class="webgl-content">
+      <button type="button" class="template-wrap" style="z-index:10" onclick="runUnityLoader(); style.display='none';">Play</button>
       <div id="gameContainer" style="width: 960px; height: 600px"></div>
       <div class="footer">
         <div class="webgl-logo"></div>
