@@ -1,9 +1,18 @@
-    <link rel="shortcut icon" href="{{ site.baseurl }}/assets/unity/{{page.unity}}/TemplateData/favicon.ico">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/unity/{{page.unity}}/TemplateData/style.css">
     <script src="{{ site.baseurl }}/assets/unity/{{page.unity}}/TemplateData/UnityProgress.js"></script>  
     <script src="{{ site.baseurl }}/assets/unity/{{page.unity}}/Build/UnityLoader.js"></script>
     <script>
       function runUnityLoader() {
+         var fileref=document.createElement("link")
+         fileref.setAttribute("rel", "stylesheet")
+         fileref.setAttribute("type", "text/css")
+         fileref.setAttribute("href", "{{ site.baseurl }}/assets/unity/{{page.unity}}/TemplateData/style.css")
+        
+        var fileref2=document.createElement("link")
+         fileref2.setAttribute("rel", "shortcut icon")
+         fileref2.setAttribute("type", "image/x-icon")
+         fileref2.setAttribute("href", "{{ site.baseurl }}/assets/unity/{{page.unity}}/TemplateData/favicon.ico")
+        
+        
           var gameInstance = UnityLoader.instantiate("gameContainer", "{{ site.baseurl }}/assets/unity/{{page.unity}}/Build/builds.json", {onProgress: UnityProgress});
       }
     </script>
