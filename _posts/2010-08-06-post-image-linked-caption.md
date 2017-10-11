@@ -1,5 +1,5 @@
 ---
-layout: single
+author_profile: false
 title: "Post: Image (Linked with Caption)"
 categories:
   - Post Formats
