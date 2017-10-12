@@ -23,17 +23,22 @@ tags:
 [![Foo](https://jekyllrb.com/img/logo-2x.png)](https://jekyllrb.com/img/logo-2x.png)
 {% endcapture %}
 
-<span>
-  <figure>
-    {{ fig_unity | markdownify | remove: "<p>" | remove: "</p>" }}
-  </figure>
-  <figure>
-    {{ fig_gh | markdownify | remove: "<p>" | remove: "</p>" }}
-  </figure>
-  <figure>
-    {{ fig_jekyll | markdownify | remove: "<p>" | remove: "</p>" }}
-  </figure>
-</span>
+<style type="text/css">
+  .figure{
+  display: in-line
+  }
+</style>  
+  
+<figure>
+  {{ fig_unity | markdownify | remove: "<p>" | remove: "</p>" }}
+</figure>
+<figure>
+  {{ fig_gh | markdownify | remove: "<p>" | remove: "</p>" }}
+</figure>
+<figure>
+  {{ fig_jekyll | markdownify | remove: "<p>" | remove: "</p>" }}
+</figure>
+
 
 WIP - I'll add more detail to this soon.
 
