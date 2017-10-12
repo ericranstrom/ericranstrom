@@ -1,7 +1,7 @@
 {% if post.header.teaser %}
   {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
 {% elsif post.unity_img %}
-{% capture teaser %}{{ site.baseurl }}/assets/unity/{{post.unity_dir}}/{{post.unity_img}}{% endcapture %}
+{% capture teaser %}/assets/unity/{{post.unity_dir}}/{{post.unity_img}}{% endcapture %}
 {% else %}
   {% assign teaser = site.teaser %}
 {% endif %}
