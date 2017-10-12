@@ -11,9 +11,37 @@ tags:
   - unity
 ---
 
-<img src="https://unity3d.com/profiles/unity3d/themes/unity/images/company/brand/logos/primary/unity-master-black.svg" alt="" />
-<img src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" alt="" />
-<img src="https://jekyllrb.com/img/logo-2x.png" alt="" />
+<style type="text/css">
+  #partners {
+    height: 105px;
+    background-color: #eee;
+    white-space: nowrap;
+    width: 100%;
+    display: table;
+  }
+
+  .logo-image {
+    vertical-align: middle;
+    padding: 13px;
+    display: table-cell;
+  }
+  
+  .logo-image img {
+    max-width: 100%;
+  }
+</style>
+
+<div id="imageGroup">
+  <div class="logo-image">
+    <img src="https://unity3d.com/profiles/unity3d/themes/unity/images/company/brand/logos/primary/unity-master-black.svg" alt="" />
+  </div>
+  <div class="logo-image">
+    <img src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" alt="" />
+  </div>
+  <div class="logo-image">
+    <img src="https://jekyllrb.com/img/logo-2x.png" alt="" />
+  </div>
+</div>
 
 WIP - I'll add more detail to this soon.
 
