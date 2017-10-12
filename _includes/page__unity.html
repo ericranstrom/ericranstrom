@@ -1,13 +1,25 @@
-    <script src="{{ site.baseurl }}/assets/unity/{{page.unity}}/TemplateData/UnityProgress.js"></script>  
-    <script src="{{ site.baseurl }}/assets/unity/{{page.unity}}/Build/UnityLoader.js"></script>
+    <script src="{{ site.baseurl }}/assets/unity/{{page.unity_dir}}/TemplateData/UnityProgress.js"></script>  
+    <script src="{{ site.baseurl }}/assets/unity/{{page.unity_dir}}/Build/UnityLoader.js"></script>
+    <style type="text/css">
+            .button{
+              height: 960px; 
+              width: 600px; 
+              background: url({{ site.baseurl }}/assets/unity/{{page.unity_dir}}/Build/{{page.unity_img}}) no-repeat;
+              cursor:pointer;
+              border: none;
+            }
+        </style>
     <script>
       function runUnityLoader() {
-          var gameInstance = UnityLoader.instantiate("gameContainer", "{{ site.baseurl }}/assets/unity/{{page.unity}}/Build/builds.json", {onProgress: UnityProgress});
+          const gameContainer = document.getElementById('gameContainer');
+          gameContainer.firstChild.remove()  //get rid of the button and replace it with the game
+          var gameInstance = UnityLoader.instantiate("gameContainer", "{{ site.baseurl }}/assets/unity/{{page.unity_dir}}/Build/builds.json", {onProgress: UnityProgress});
       }
     </script>
     <div class="webgl-content">
-      <button type="button" class="template-wrap" style="z-index:10" onclick="runUnityLoader(); style.display='none';">Play</button>
-      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div id="gameContainer" style="width: 960px; height: 600px">
+        <button type="button" class="button template-wrap" style="z-index:10" onclick="runUnityLoader(); style.display='none';">Play</button>
+      </div>
       <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="gameInstance.setFullscreen(1)"></div>
