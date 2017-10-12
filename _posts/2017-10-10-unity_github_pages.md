@@ -1,6 +1,7 @@
 ---
 title: "Serving Unity WebGL Builds from Github Pages"
 date: 2017-10-10
+exerpt: "In addition to supporting PC, Mac, Linux, iOS, Android, and others, Unity supports building for WebGL, which allows developers to host Unity games on the internet.  Github Pages is a powerful platform for serving static content.  Used together, it is easy to maintain a simple website which serves playable games."
 categories:
   - General
 tags:
