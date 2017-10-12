@@ -1,7 +1,7 @@
 ---
 title: "Serving Unity WebGL Builds from Github Pages"
 date: 2017-10-10
-exerpt: "In addition to supporting PC, Mac, Linux, iOS, Android, and others, Unity supports building for WebGL, which allows developers to host Unity games on the internet.  Github Pages is a powerful platform for serving static content.  Used together, it is easy to maintain a simple website which serves playable games."
+excerpt : "In addition to supporting PC, Mac, Linux, iOS, Android, and others, Unity supports building for WebGL, which allows developers to host Unity games on the internet.  Github Pages is a powerful platform for serving static content.  Used together, it is easy to maintain a simple website which serves playable games."
 categories:
   - General
 tags:
@@ -30,11 +30,11 @@ In addition to supporting PC, Mac, Linux, iOS, Android, and others, Unity suppor
 
 Disclosure: I am new to Jekyll (the site generator/templating engine powering Github pages) and don't promise this is easiest or most extensible way to solve this problem.
 
-Step 1) Set up a site using Github Pages.  I forked https://github.com/mmistakes/minimal-mistakes to get started because I like the clean look-and-feel.  Play around until you are comforatable adding posts, and see the referenced documentation as needed: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+Step 1) Set up a site using Github Pages.  I forked [minimal-mistakes](https://github.com/mmistakes/minimal-mistakes) to get started because I like the clean look-and-feel.  Play around until you are comforatable adding posts, and see the [referenced documentation](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/) as needed.
 
-Step 2) Build your unity project for WebGL, preferrably not using 'development mode'.  (link to info) This will produce a directory containing index.html, Build/, and TemplateData/.
+Step 2) Build your unity project for WebGL, preferrably not using 'development mode'.  (link to info) This will produce a directory containing `index.html`, `Build/`, and `TemplateData/`.
 
-Step 3) Commit the Build/ and TemplateData/ directories to /assets/unity/build_name/ in your project (change 'build_name' to whatever you want the name of your build to be)
+Step 3) Commit the `Build/` and `TemplateData/` directories to `/assets/unity/build_name/` in your project (change 'build_name' to whatever you want the name of your build to be)
 
 Step 4) Create a post and add this snippet to front matter:  `unity_dir: build_name` using your build_name from before
 
