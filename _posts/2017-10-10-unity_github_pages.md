@@ -33,7 +33,7 @@ tags:
 
 <div id="imageGroup">
   <div class="logo-image">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Official_unity_logo.png" alt="" />
+    <img src="https://unity3d.com/profiles/unity3d/themes/unity/images/company/brand/logos/primary/unity-logo-white.png" alt="" />
   </div>
   <div class="logo-image">
     <img src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" alt="" />
