@@ -11,28 +11,9 @@ tags:
   - unity
 ---
 
-{% capture img_unity %}
-[![Foo](https://unity3d.com/profiles/unity3d/themes/unity/images/company/brand/logos/primary/unity-master-black.svg)](https://unity3d.com/profiles/unity3d/themes/unity/images/company/brand/logos/primary/unity-master-black.svg)
-{% endcapture %}
-
-{% capture img_gh %}
-[![Foo](https://assets-cdn.github.com/images/modules/logos_page/Octocat.png)](https://assets-cdn.github.com/images/modules/logos_page/Octocat.png)
-{% endcapture %}
-
-{% capture img_jekyll %}
-[![Foo](https://jekyllrb.com/img/logo-2x.png)](https://jekyllrb.com/img/logo-2x.png)
-{% endcapture %}
-
-<img>
-  {{ img_unity | markdownify | remove: "<p>" | remove: "</p>" }}
-</img>
-<img>
-  {{ img_gh | markdownify | remove: "<p>" | remove: "</p>" }}
-</img>
-<img>
-  {{ img_jekyll | markdownify | remove: "<p>" | remove: "</p>" }}
-</img>
-
+<img src="(https://unity3d.com/profiles/unity3d/themes/unity/images/company/brand/logos/primary/unity-master-black.svg" />
+<img src="(https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" />
+<img src="(https://jekyllrb.com/img/logo-2x.png" />
 
 WIP - I'll add more detail to this soon.
 
