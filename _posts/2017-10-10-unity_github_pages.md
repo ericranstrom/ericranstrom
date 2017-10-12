@@ -1,5 +1,6 @@
 ---
 title: "What we're doing"
+date: 2017-10-10
 categories:
   - General
 tags:
