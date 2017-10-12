@@ -11,17 +11,29 @@ tags:
   - unity
 ---
 
-{% capture fig_img %}
+{% capture fig_unity %}
 [![Foo](https://unity3d.com/profiles/unity3d/themes/unity/images/company/brand/logos/primary/unity-master-black.svg)](https://unity3d.com/profiles/unity3d/themes/unity/images/company/brand/logos/primary/unity-master-black.svg)
 {% endcapture %}
 
-{% capture fig_caption %}
+{% capture fig_gh %}
+[![Foo](https://assets-cdn.github.com/images/modules/logos_page/Octocat.png)](https://assets-cdn.github.com/images/modules/logos_page/Octocat.png)
 {% endcapture %}
 
-<figure>
-  {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
-  <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
-</figure>
+{% capture fig_jekyll %}
+[![Foo](https://jekyllrb.com/img/logo-2x.png)](https://jekyllrb.com/img/logo-2x.png)
+{% endcapture %}
+
+<span>
+  <figure>
+    {{ fig_unity | markdownify | remove: "<p>" | remove: "</p>" }}
+  </figure>
+  <figure>
+    {{ fig_gh | markdownify | remove: "<p>" | remove: "</p>" }}
+  </figure>
+  <figure>
+    {{ fig_jekyll | markdownify | remove: "<p>" | remove: "</p>" }}
+  </figure>
+</span>
 
 WIP - I'll add more detail to this soon.
 
