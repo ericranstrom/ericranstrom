@@ -33,13 +33,13 @@ tags:
 
 <div id="imageGroup">
   <div class="logo-image">
-    <img src="https://unity3d.com/profiles/unity3d/themes/unity/images/company/brand/logos/primary/unity-logo-white.png" alt="" />
+    <img src="{{ site.url }}{{ site.baseurl }}/assets/images/unity-logo-white.png" alt="" />
   </div>
   <div class="logo-image">
-    <img src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" alt="" />
+    <img src="{{ site.url }}{{ site.baseurl }}/assets/images/Octocat.png" alt="" />
   </div>
   <div class="logo-image">
-    <img src="https://jekyllrb.com/img/logo-2x.png" alt="" />
+    <img src="{{ site.url }}{{ site.baseurl }}/assets/images/jekyll.png" alt="" />
   </div>
 </div>
 
@@ -52,7 +52,7 @@ Disclosure: I am new to Jekyll (the site generator/templating engine powering Gi
 
 Step 1) Set up a site using Github Pages. I forked [minimal-mistakes](https://github.com/mmistakes/minimal-mistakes) to get started because I like the clean look-and-feel. Play around until you are comforatable adding posts, and see the [referenced documentation](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/) as needed.
 
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/BlogWithSimplePost.png" alt="" class="full">
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/BlogWithSimplePost.PNG" alt="" class="full">
 
 Step 2) Build your unity project for WebGL, preferrably not as a 'development build' [more info](https://docs.unity3d.com/Manual/webgl-building.html). This will produce a directory containing `index.html`, `Build/`, and `TemplateData/`.
 
