@@ -50,17 +50,45 @@ In addition to supporting PC, Mac, Linux, iOS, Android, and other platforms, Uni
 
 Disclosure: I am new to Jekyll (the site generator/templating engine powering Github pages) and don't promise this is easiest or most extensible way to solve this problem.
 
+<hr>
+
 Step 1) Set up a site using Github Pages. I forked [minimal-mistakes](https://github.com/mmistakes/minimal-mistakes) to get started because I like the clean look-and-feel. Play around until you are comforatable adding posts, and see the [referenced documentation](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/) as needed.
 
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/BlogWIthSimplePost.PNG" alt="">
 
+<hr>
+
 Step 2) Build your unity project for WebGL, preferrably not as a 'development build' [more info](https://docs.unity3d.com/Manual/webgl-building.html). This will produce a directory containing `index.html`, `Build/`, and `TemplateData/`.
+
+<hr>
 
 Step 3) Commit the `Build/` and `TemplateData/` directories to `/assets/unity/build_name/` in your project (change 'build_name' to whatever you want the name of your build to be)
 
-Step 4) Create a post and add this snippet to front matter: `unity_dir: build_name` using your build_name from before
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/gameAssetsUploaded.PNG" alt="">
 
-Step 5) update the layout (give the layout)
+<hr>
+
+Step 4) Create (or edit) a post and add this snippet to front matter: `unity_dir: build_name` using your build_name from before.  This will tell jekyll where to look for the game files for your post.
+
+```
+---
+title: "Test Post"
+date: 2017-10-13
+unity_dir: game_post
+categories:
+  - General
+tags:
+  - test
+---
+
+This is a test post.
+
+```
+Commit this post, then open it in the browser and you'll see nothing special is happening yet.
+
+<hr>
+
+Step 5) You'll next need to update the layout used for your posts. update the layout (give the layout)
 
 Step 6) add the page for unity (give the page v1)
 
