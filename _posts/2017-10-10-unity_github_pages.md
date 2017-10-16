@@ -125,13 +125,11 @@ Step 8) Go to your github pages website and open your post.  You should see a ga
 <hr>
 
 General Tips:
-If you are having trouble and need to debug, use chrome's developer tools to right-click where the game should be, and pull up the inpsector. Confirm the path for your different game assets is what you expect it to be. If not you may need to do some trouble shooting (feel free to comment below if you get stuck, preferrably including a link to your repo, and I'll try to help)
+If you are having trouble and need to debug, use chrome's developer tools to right-click where the game should be, and pull up the inpsector. Confirm the paths for your different game assets are what you expect. If not you may need to do some trouble shooting (feel free to comment below if you get stuck, preferrably including a link to your repo, and I'll try to help)
 
-You are serving your Unity game from github, which is awesome. It would be nice if the game didn't load as soon as the page loads though. Let's fix that.
-Step 9) We're going to add a button that loads the game when pressed, and displays an image of the game. (give the page v2)
-Step 10) Lets display the same game image on the main list for the posts (give archive-single changes - the 'grid' removal, and the setting of teaser)
+You are serving your Unity game from github, which is awesome.  
+Feel free to make any changes you want to any of the files we touched in this guide - for example, you could try updating `_includes/page__unity.html` to only load the game after a button is pressed.
+
 
 And that's it.
-I'll be updating this post with more detailed instructions.
-
 Check out the next post for a working example.
