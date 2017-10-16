@@ -97,6 +97,8 @@ Search `_layouts/single.html` for a line containing {% raw %}`{{ content }}`{% e
 
 With this addition, when you open a post with `unity_dir` defined, it will include the html snippet `page__unity.html` in the body of the post (which we'll define in the next step).
 
+<hr>
+
 Step 6) Now we'll define the html to be included when we've added `unity_dir` to a post.  We want the included section to load the unity game to be played, just as the `index.html` file produced by your local unity build does.   To do this, create a new file in `_includes` called `page__unity.html` and populate it with the following: 
 {% raw %}
     <script src="{{ site.baseurl }}/assets/unity/{{page.unity_dir}}/TemplateData/UnityProgress.js"></script>  
@@ -111,10 +113,14 @@ Step 6) Now we'll define the html to be included when we've added `unity_dir` to
 
 You'll note that the variable `unity_dir` is used here to reference 3 files in the `assets/unity/{unity_dir_varaible}` directory-- `TemplateData/UnityProgress.js`, `Build/UnityLoader.js`, and `Build/builds.json`.  Another variable, `site.baseurl`, is also used as a part of the path.  We'll set that in the next step.
 
+<hr>
+
 Step 7) Open `_config.yml` and search for `baseurl`.  Update the baseurl variable so that it references your project name.  For example:
 ```
 baseurl                  : /minimal-mistakes # the subpath of your site, e.g. "/blog"
 ```
+
+<hr>
 
 Step 8) Go to your github pages website and open your post.  You should see a game load, something like this:
 <img src="{{ site.url }}{{ site.baseurl }}/assets/images/BlogWithGame.PNG" alt="">
