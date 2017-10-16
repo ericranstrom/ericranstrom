@@ -87,7 +87,7 @@ Commit this post, then open it in the browser and you'll see nothing special is 
 
 <hr>
 
-Step 5) Next we'll want to wire up the 'unity_dir' variable so jekyll will show the unity game.   To do this, you'll next need to update the layout used for your posts. If we look in `_config.yml` near the bottom, there is a sectinon called 'defaults' where it specifies the default layout for posts, called 'single'.   In `_layouts/single.html` we'll make the change than handles the unity_dir variable.
+Step 5) Next we'll want to wire up the 'unity_dir' variable so jekyll will show the unity game.   To do this, you'll next need to update the layout used for your posts. If we look in `_config.yml` near the bottom, there is a sectinon called 'defaults' where it specifies the default layout for posts, called 'single'.   This is the layout the posts will use, so in `_layouts/single.html` we'll make the change than handles the unity_dir variable.
 
 Search for a line containing {% raw %}`{{ content }}`{% endraw %}, and in the line directly above it, add
  {% raw %}
@@ -100,7 +100,7 @@ Search for a line containing {% raw %}`{{ content }}`{% endraw %}, and in the li
 
 With this addition, when you open a post with `unity_dir` defined, it will include the html snippet `page__unity.html` in the body of the post (which we'll define in the next step).
 
-Step 6) Now we'll define the html to be included when we've added `unity_dir` to a post.  We want the included section to load the unity game to be played, just as the `index.html` file produced by your local unity build does.   Create a new file in `_includes` called `page__unity.html` and populate it with the following: 
+Step 6) Now we'll define the html to be included when we've added `unity_dir` to a post.  We want the included section to load the unity game to be played, just as the `index.html` file produced by your local unity build does.   To do this, create a new file in `_includes` called `page__unity.html` and populate it with the following: 
 {% raw %}
     <script src="{{ site.baseurl }}/assets/unity/{{page.unity_dir}}/TemplateData/UnityProgress.js"></script>  
     <script src="{{ site.baseurl }}/assets/unity/{{page.unity_dir}}/Build/UnityLoader.js"></script>
@@ -112,9 +112,9 @@ Step 6) Now we'll define the html to be included when we've added `unity_dir` to
     </div>
 {% endraw %}
 
-You'll note that the variable `unity_dir` is used here to reference 3 files in the `assets/unity/unity_dir` directory-- `TemplateData/UnityProgress.js`, `Build/UnityLoader.js`, and `/Build/builds.json`.  Another variable, `site.baseurl`, is also used as a part of the path.  We'll set that in the next step.
+You'll note that the variable `unity_dir` is used here to reference 3 files in the `assets/unity/{unity_dir_varaible}` directory-- `TemplateData/UnityProgress.js`, `Build/UnityLoader.js`, and `Build/builds.json`.  Another variable, `site.baseurl`, is also used as a part of the path.  We'll set that in the next step.
 
-Step 7) Open `config.yml` and search for `baseurl`.  Update the baseurl variable so that it references your project name.  For example:
+Step 7) Open `_config.yml` and search for `baseurl`.  Update the baseurl variable so that it references your project name.  For example:
 ```
 baseurl                  : /minimal-mistakes # the subpath of your site, e.g. "/blog"
 ```
