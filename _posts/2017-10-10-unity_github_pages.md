@@ -46,7 +46,7 @@ tags:
 WIP - I'll add more detail to this soon.
 
 
-In addition to supporting PC, Mac, Linux, iOS, Android, and other platforms, Unity supports building for WebGL which allows developers to host Unity games on the internet. Github Pages is a powerful platform for serving static content. Used together, it is easy to maintain a simple website which serves playable games. This guide will relay the steps I followed to get this blog set up.
+In addition to supporting deployment to PC, Mac, Linux, iOS, Android, and many other platforms, Unity supports building for WebGL, allowing developers to host Unity games on the internet. Github Pages is a powerful platform for serving static content. Used github pages, it is easy to maintain a simple website which serves playable unity games. This guide will relay the steps I followed to get this blog set up.
 
 Disclosure: I am new to Jekyll (the site generator/templating engine powering Github pages) and don't promise this is easiest or most extensible way to solve this problem.
 
@@ -88,7 +88,16 @@ Commit this post, then open it in the browser and you'll see nothing special is 
 
 <hr>
 
-Step 5) You'll next need to update the layout used for your posts. update the layout (give the layout)
+Step 5) Next we'll want to wire up the 'unity_dir' variable so jekyll will show the unity game.   To do this, you'll next need to update the layout used for your posts. If we look in `_config.yml` near the bottom, there is a sectinon called 'defaults' where it specifies the default layout for posts, called 'single'.   In `_layouts/single.html` we'll make the change than handles the unity_dir variable.
+
+Search for a line containing `{{ content }}`, and in the line directly above it, add 
+```
+{% if page.unity_dir %}
+   {% include page__unity.html %}
+{% endif %}
+```
+
+With this addition, when you open a post with `unity_dir` defined, it will include the html snippet `page__unity.html` in the body of the post (which we'll define in the next step).
 
 Step 6) add the page for unity (give the page v1)
 
