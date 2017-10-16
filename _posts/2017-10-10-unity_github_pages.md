@@ -5,10 +5,9 @@ excerpt: "Github Pages + Unity WebGL = Easy game dev blog."
 categories:
   - General
 tags:
-  - about
-  - jekyll
-  - github pages
-  - unity
+  - WebGl
+  - Github Pages
+  - Unity
 ---
 
 <style type="text/css">
@@ -101,9 +100,24 @@ Search for a line containing {% raw %}`{{ content }}`{% endraw %}, and in the li
 
 With this addition, when you open a post with `unity_dir` defined, it will include the html snippet `page__unity.html` in the body of the post (which we'll define in the next step).
 
-Step 6) add the page for unity (give the page v1)
+Step 6) Now we'll define the html to be included when we've added `unity_dir` to a post.  We want the included section to load the unity game to be played, just as the `index.html` file produced by your local unity build does.   Create a new file in `_includes` called `page__unity.html` and populate it with the following: 
+{% raw %}
+    <script src="{{ site.baseurl }}/assets/unity/{{page.unity_dir}}/TemplateData/UnityProgress.js"></script>  
+    <script src="{{ site.baseurl }}/assets/unity/{{page.unity_dir}}/Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "{{ site.baseurl}}/assets/unity/{{page.unity_dir}}/Build/builds.json",{onProgress: UnityProgress});  
+    </script>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+    </div>
+{% endraw %}
 
-Step 7) make sure your site baseurl is set
+You'll note that the variable `unity_dir` is used here to reference 3 files in the `assets/unity/unity_dir` directory-- `TemplateData/UnityProgress.js`, `Build/UnityLoader.js`, and `/Build/builds.json`.  Another variable, `site.baseurl`, is also used as a part of the path.  We'll set that in the next step.
+
+Step 7) Open `config.yml` and search for `baseurl`.  Update the baseurl variable so that it references your project name.  For example:
+```
+baseurl                  : /minimal-mistakes # the subpath of your site, e.g. "/blog"
+```
 
 Step 8) load your page. hopefully you see a build loading. if not, use chrome's developer tools to right-click where the game should be, and pull up the inpsector. Confirm the path for your different game assets is what you expect it to be. If not you may need to do some trouble shooting (feel free to comment below if you get stuck, preferrably including a link to your repo, and I'll try to help)
 
