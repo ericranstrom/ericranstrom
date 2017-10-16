@@ -84,7 +84,7 @@ Commit this post, then open it in the browser and you'll see nothing special is 
 
 <hr>
 
-Step 5) Next we'll want to wire up the 'unity_dir' variable so jekyll will show the unity game.   To do this, you'll next need to update the layout used for your posts. If we look in `_config.yml` near the bottom, there is a sectinon called 'defaults' where it specifies the default layout for posts, called 'single'.   This is the layout the posts will use, so in `_layouts/single.html` we'll make the change than handles the unity_dir variable.
+Step 5) Next we'll want to wire up the 'unity_dir' variable so jekyll will show the unity game you uploaded.   To do this, you'll next need to update the layout used for your posts. If we look in `_config.yml` near the bottom, there is a sectinon called 'defaults' where it specifies the default layout for posts, called 'single'.   This is the layout the posts will use, so in `_layouts/single.html` we'll make the change than handles the unity_dir variable.
 
 Search for a line containing {% raw %}`{{ content }}`{% endraw %}, and in the line directly above it, add
  {% raw %}
