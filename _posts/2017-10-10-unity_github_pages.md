@@ -119,7 +119,13 @@ Step 7) Open `_config.yml` and search for `baseurl`.  Update the baseurl variabl
 baseurl                  : /minimal-mistakes # the subpath of your site, e.g. "/blog"
 ```
 
-Step 8) load your page. hopefully you see a build loading. if not, use chrome's developer tools to right-click where the game should be, and pull up the inpsector. Confirm the path for your different game assets is what you expect it to be. If not you may need to do some trouble shooting (feel free to comment below if you get stuck, preferrably including a link to your repo, and I'll try to help)
+Step 8) Go to your github pages website and open your post.  You should see a game load, something like this:
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/BlogWithGame.PNG" alt="">
+
+<hr>
+
+General Tips:
+If you are having trouble and need to debug, use chrome's developer tools to right-click where the game should be, and pull up the inpsector. Confirm the path for your different game assets is what you expect it to be. If not you may need to do some trouble shooting (feel free to comment below if you get stuck, preferrably including a link to your repo, and I'll try to help)
 
 You are serving your Unity game from github, which is awesome. It would be nice if the game didn't load as soon as the page loads though. Let's fix that.
 Step 9) We're going to add a button that loads the game when pressed, and displays an image of the game. (give the page v2)
