@@ -42,7 +42,7 @@ tags:
   </div>
 </div>
 
-In addition to supporting deployment to PC, Mac, Linux, iOS, Android, and many other platforms, Unity supports building for WebGL, allowing developers to host Unity games on the internet. Github Pages is a powerful platform for serving static content. Used github pages, it is easy to maintain a simple website which serves playable unity games. This guide will relay the steps I followed to get this blog set up.
+In addition to supporting deployment to PC, Mac, Linux, iOS, Android, and many other platforms, Unity supports building for WebGL, allowing developers to host Unity games on the internet. Github Pages is a powerful platform for serving static content. Using github pages, it is easy to maintain a simple website which serves playable unity games. This guide will relay the steps I followed to get this blog set up.
 
 Disclosure: I am new to Jekyll (the site generator/templating engine powering Github pages) and don't promise this is easiest or most extensible way to solve this problem.
 
